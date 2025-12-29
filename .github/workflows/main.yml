@@ -31,8 +31,8 @@ jobs:
     - name: Download a Build Artifact 
       uses: actions/download-artifact@v7.0.0
       with:
-        name: Build
-        path: ${{ github.run_id }}
+        name: ${{ github.run_id }}
+        path: build
 
    
     # - name: setup nodejs
