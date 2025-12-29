@@ -18,9 +18,10 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v4
     - name: Setup Node.js
-      run: 
-        curl -s https://deb.nodesource.com/setup_16.x | sudo bash
-        sudo apt install nodejs -y
+    - name: setup nodejs
+      run: |
+         curl -s https://deb.nodesource.com/setup_16.x | sudo bash
+         sudo apt install nodejs -y
     - name: Install Dependencies
       run: npm install
 
